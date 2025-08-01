@@ -141,6 +141,6 @@ st.markdown("""
 - 🔗 [LinkedIn](https://www.linkedin.com/in/benjamin-uka-imo)  
 - 💻 [GitHub](https://github.com/uka-ben)  
 - 📺 [YouTube](https://youtube.com/@blackdatascience)  
-
+""")
 
 st.success("Thank you for visiting my AI & Data Engineering Portfolio! Let's collaborate or innovate together.")
