@@ -3,35 +3,34 @@ from PIL import Image
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
-    page_title="Benjamin Imo Uka | Data Science Portfolio",
+    page_title="Benjamin Uka Imo | AI & Data Engineering Portfolio",
     page_icon="📊",
     layout="wide"
 )
 
 # --- PROFILE IMAGE ---
-st.image("profile.png", width=100)
-st.markdown("""
-**Benjamin Imo Uka**  
-Data Scientist | AI & Data Engineer  
-📍 Port Harcourt, Nigeria
+image = Image.open("profile.png")
+st.image(image, width=130)
 
-✉ [Email](mailto:benjaminukaimo@gmail.com)  
+# --- HEADER ---
+st.title("Benjamin Uka Imo")
+st.subheader("AI & Data Engineer | Machine Learning Systems | LLMs | MLOps | Databricks | PySpark")
+
+st.markdown("""
+📍 Port Harcourt, Nigeria  
+✉ [benjaminukaimo@gmail.com](mailto:benjaminukaimo@gmail.com)  
 📞 +234 706 719 3071  
 🔗 [LinkedIn](https://www.linkedin.com/in/benjamin-uka-imo)  
 💻 [GitHub](https://github.com/uka-ben)  
 📺 [YouTube](https://youtube.com/@blackdatascience)
 """)
 
-# --- HEADER ---
-st.title("Benjamin Imo Uka")
-st.subheader("Data Scientist | AI & Data Engineer | Specializing in DRL, NLP & Anomaly Detection")
-
 # --- ABOUT ME ---
 st.markdown("## 🧠 About Me")
 st.markdown("""
-I am a dynamic and solutions-oriented Data Scientist and AI Engineer with strong expertise in machine learning, deep reinforcement learning (DRL), natural language processing (NLP), anomaly detection, and end-to-end data engineering. I am skilled in deploying scalable ML systems and building real-time analytics platforms using cloud-native tools such as Databricks, GCP, and Azure.
+Dynamic and solutions-oriented AI & Data Engineer with experience in end-to-end machine learning systems, MLOps pipelines, real-time big data processing, and scalable AI deployments. Skilled in Databricks, PySpark, Delta Live Tables, and large-scale transformer-based architectures (LLMs, RAGs). 
 
-My core strength lies in solving complex business problems using AI-first methodologies—leveraging technologies like GNNs, Transformers, LLMs, and DRL to deliver intelligent insights and automation at scale.
+My mission is to build intelligent, production-ready systems across FinTech, HealthTech, and infrastructure analytics, leveraging GNNs, Deep RL, NLP, and CI/CD pipelines.
 """)
 
 # --- TECHNICAL SKILLS ---
@@ -41,102 +40,107 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown("### Machine Learning & AI")
     st.markdown("""
-    - Time Series (TFT, Prophet)
-    - Graph Neural Networks (Graphormer, DGL)
-    - Deep Reinforcement Learning (PPO, A2C, DDPG)
-    - NLP: LLMs, RAG
-    - Anomaly Detection & Cybersecurity
+    - Time Series (TFT, Prophet), Deep RL (PPO, SAC), Quantum ML (Basic)
+    - Anomaly Detection, Risk Modeling, Cybersecurity Analytics
+    - NLP: LLM, RAG, Chatbots, Sentiment Analysis
     - AutoML: AutoGluon, H2O.ai, PyCaret
     """)
 
 with col2:
-    st.markdown("### Programming & Tools")
+    st.markdown("### Programming & Toolkits")
     st.markdown("""
     - Python, SQL, PySpark, Spark SQL
-    - TensorFlow, PyTorch, scikit-learn, Hugging Face
-    - Gymnasium, RLlib, Stable-Baselines3
-    - Visualization: Matplotlib, Seaborn, Plotly, Power BI
+    - Hugging Face, Stable-Baselines3, Gymnasium
+    - TensorFlow, PyTorch, scikit-learn, RLlib
+    - Data Viz: Matplotlib, Seaborn, Plotly, Power BI, YData Profiler
     """)
 
 with col3:
-    st.markdown("### Data Engineering & MLOps")
+    st.markdown("### Data Engineering & Cloud MLOps")
     st.markdown("""
-    - Delta Live Tables, Spark Streaming, ETL, Airflow
-    - Databricks, GCP (BigQuery, Dataflow), Azure
-    - MLflow, Docker, CI/CD Pipelines, Flask APIs
-    - Warehousing: Snowflake, Delta Lake, BigQuery
+    - Databricks, Delta Live Tables, AutoLoader, Apache Beam
+    - GCP (BigQuery, Dataflow), Azure Databricks
+    - CI/CD, MLflow, Docker, Airflow, Flask API
+    - Warehousing: Snowflake, Delta Lake
     """)
 
-# --- PROFESSIONAL EXPERIENCE ---
+# --- EXPERIENCE ---
 st.markdown("## 💼 Professional Experience")
-
 st.markdown("""
 **Data Scientist**  
 *Miracle Health Recruitment, UK (Remote | Nov 2024 – Feb 2025)*  
-- Collaborated with cross-functional teams to embed ML solutions into operational systems.
+- Built streaming pipelines using Delta Live Tables and AutoLoader.  
+- Integrated data science workflows across team operations.
 
 **Junior Data Scientist**  
 *Baknance Technology (Remote | Feb 2023 – Apr 2024)*  
-- Developed RAG-based chatbot using Hugging Face and OpenAI.
-- Built a GNN and DRL-powered fraud detection system with 50% improvement in accuracy.
-- Led sentiment analysis for financial predictions, reducing default risks by 30%.
-- Delivered forecasting models that optimized decision-making efficiency.
+- Developed ML systems using Databricks ML Runtime for real-time inference.  
+- Created RAG-based chatbots using OpenAI + Hugging Face integrated with PySpark ETL pipelines.  
+- Built fraud detection system using GNNs + DRL reducing false positives by 50%.  
+- Delivered financial risk models & sentiment analysis pipelines.  
+- Implemented Delta Lake workflows for continuous model monitoring.
 """)
 
 # --- PROJECT HIGHLIGHTS ---
-st.markdown("## 🚀 Key Projects")
+st.markdown("## 🚀 Projects")
 
-st.markdown("### 📈 Financial Systems")
+st.markdown("### 📈 Finance & Risk Modeling")
 st.markdown("""
-- [Stock Market Analysis](https://timetion.streamlit.app/): Anti-symmetric pattern detection for real-time insights.
-- [Portfolio Optimizer](https://ben-stock-deep-learning.streamlit.app/): DRL-based investment strategy model.
-- Sixfold trading model with DRL, LSTM, QNN, Sentiment Analysis.
+- [Stock Market Analysis](https://timetion.streamlit.app/): Detected void anti-symmetric patterns in time series.
+- [Portfolio Optimizer](https://ben-stock-deep-learning.streamlit.app/): DRL-based asset allocator.
+- Sixfold strategy model: Ensemble + QNN + DL + DRL + LSTM + Time Series.
 """)
 
-st.markdown("### 🤖 AI & NLP Solutions")
+st.markdown("### 🤖 AI & NLP Chatbots")
 st.markdown("""
-- [benGPT](https://benhealthcare.streamlit.app/): Conversational LLM chatbot for personalized Q&A.
-- Multimodal healthcare assistant that improves diagnosis accuracy by 35%.
+- [benGPT](https://benhealthcare.streamlit.app/): Deployed LLM chatbot using OpenAI API.
+- Document-aware chatbots with RAG architecture + vector search.
+- [Healthcare NLP Tool](https://benhealthcare.streamlit.app/): Multimodal diagnosis assistant (↑ prediction accuracy by 35%).
 """)
 
 st.markdown("### 🔐 Anomaly Detection Systems")
 st.markdown("""
-- Real-time fraud detection using GNNs and Transformers.
-- Cybersecurity threat modeling with DRL and behavioral analytics.
+- Built DRL-GNN-Transformer hybrid model for fraud detection.
+- Designed real-time anomaly detection system for e-commerce + healthcare claims.
+- Set up threat detection using user behavior and traffic monitoring.
 """)
 
 st.markdown("### ♻️ Optimization & Predictive Tools")
 st.markdown("""
-- [Carbon Emission Optimizer](https://ben-co2optimization.streamlit.app/): DRL agent for global CO₂ reduction strategies.
-- [ML Decision Suite](https://benjitable-ds.streamlit.app/): Real-time analytics tool for classification, regression, clustering.
-- RL-based IoT Predictive Maintenance System.
+- [CO₂ Optimizer](https://ben-co2optimization.streamlit.app/): DRL for global carbon policy modeling.
+- [ML Analytics Suite](https://benjitable-ds.streamlit.app/): Built unified system for clustering, classification & anomaly detection.
+- IoT Failure Prediction: RL-powered predictive maintenance for industrial IoT.
 """)
 
 st.markdown("### 🕹️ Robotics & Game AI")
 st.markdown("""
-- Trained agents in robotic simulations using PPO and SAC.
-- Developed multi-agent game-playing reinforcement learning environments.
+- PPO and SAC-trained RL agents in robotics control environments.
+- Multi-agent RL systems for autonomous decision-making and coordination.
 """)
 
-# --- EDUCATION ---
-st.markdown("## 🎓 Education")
+# --- EDUCATION & CERTIFICATIONS ---
+st.markdown("## 🎓 Education & Certifications")
 st.markdown("""
-- **B.Sc. in Accountancy**, Imo State University, Nigeria (2016)
-- **National Diploma in Accountancy**, Imo State Polytechnic, Nigeria (2012)
+- **B.Sc. in Accountancy**, Imo State University (2016)  
+- **National Diploma in Accountancy**, Imo State Polytechnic (2012)
+- Deep Reinforcement Learning – Hugging Face *(in progress)*  
+- Neural Networks – SIMPLILEARN
 """)
 
-# --- CERTIFICATIONS ---
-st.markdown("## 📄 Certifications")
+# --- COMMUNITY & EXTRAS ---
+st.markdown("## 🌍 Community & Open Source")
 st.markdown("""
-- Neural Networks – Simplilearn  
-- Deep Reinforcement Learning – Hugging Face *(In Progress)*
+- 📺 [YouTube: Black Data Science](https://youtube.com/@blackdatascience): Tutorials on AI, ML & Data Engineering.
+- 💻 [GitHub](https://github.com/uka-ben): Open source contributions to AI/ML.
 """)
 
-# --- ADDITIONAL ACTIVITIES ---
-st.markdown("## 🌍 Additional Involvement")
+# --- CONTACT ---
+st.markdown("## 📬 Get in Touch")
 st.markdown("""
-- 🎥 Content Creator: [Black Data Science](https://youtube.com/@blackdatascience) – Tutorials on ML, AI, and Data Engineering.
-- 💻 Contributor: Actively involved in open-source ML/AI projects on GitHub.
-""")
+- ✉ [benjaminukaimo@gmail.com](mailto:benjaminukaimo@gmail.com)  
+- 🔗 [LinkedIn](https://www.linkedin.com/in/benjamin-uka-imo)  
+- 💻 [GitHub](https://github.com/uka-ben)  
+- 📺 [YouTube](https://youtube.com/@blackdatascience)  
 
-st.success("Thanks for viewing my professional portfolio! Feel free to reach out for collaborations or opportunities.")
+
+st.success("Thank you for visiting my AI & Data Engineering Portfolio! Let's collaborate or innovate together.")
