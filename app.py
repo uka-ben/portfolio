@@ -27,7 +27,7 @@ with col2:
     """)
 
     # --- RESUME DOWNLOAD BUTTON ---
-    with open("Benjamin_Uka_Resume.pdf", "rb") as file:
+    with open("Benjamin Uka ( AI, Data Engineer_).pdf", "rb") as file:
         st.download_button(
             label="📄 Download My Resume",
             data=file,
